@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Nav pills -->
+        <div class="col-md-2">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#bai1"
+                >Bài 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai2">Bài 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai3">Bài 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai4">Bài 4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai5">Bài 5</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="col-md-10 py-3">
+          <div class="tab-content">
+            <div class="tab-pane container active" id="bai1">
+              <h1>Tính lương nhân viên</h1>
+              <div class="note">
+                <p>
+                  Đầu vào: <br />
+                  - Lương 1 ngày <br />
+                  - Ngày làm <br />
+                  <br />
+                  Xử lý: <br />
+                  - Tạo biến luong1Ngay cho Lương 1 ngày và tạo biến ngayLam cho
+                  Ngày làm <br />
+                  - Tạo biến luong cho tiền lương nhân viên <br />
+                  - Gán giá trị cho luong1Ngay và ngayLam <br />
+                  - Sử dụng công thức : luong = luong1Ngay ngayLam <br />
+                  <br />
+                  Đầu ra: <br />
+                  - lương nhân viên
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="luong1Ngay"
+                    type="number"
+                    class="form-control"
+                    placeholder="Lương 1 ngày"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="ngayLam"
+                    type="number"
+                    class="form-control"
+                    placeholder="Ngày làm"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" onclick="XuLy()">
+                  Kết quả
+                </button>
+                <div class="rsText"><p id="result"></p></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai2">
+              <h1>Tính giá trị trung bình</h1>
+              <div class="note">
+                <p>
+                  Đầu vào: <br />
+                  - 5 số thực <br />
+                  <br />
+                  Xử lý: <br />
+                  - Tạo biến cho 5 số thực: st1, st2, st3, st4, st5 <br />
+                  - Tạo biến cho giá trị trung bình: tb <br />
+                  - Gán giá trị cho 5 số thực vào st1, st2, st3, st4, st5 <br />
+                  - Sử dụng công thức: tb = (st1 + st2 + st3 + st4 + st5) / 5
+                  <br />
+                  <br />
+                  Đầu ra: <br />
+                  - Giá trị trung bình
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="st1"
+                    type="number"
+                    class="form-control"
+                    placeholder="Số thực 1"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="st2"
+                    type="number"
+                    class="form-control"
+                    placeholder="Số thực 2"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="st3"
+                    type="number"
+                    class="form-control"
+                    placeholder="Số thực 3"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="st4"
+                    type="number"
+                    class="form-control"
+                    placeholder="Số thực 4"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="st5"
+                    type="number"
+                    class="form-control"
+                    placeholder="Số thực 5"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" onclick="Bai2()">
+                  Kết quả
+                </button>
+                <div class="rsText"><p id="result2"></p></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai3">
+              <h1>Quy đổi tiền</h1>
+              <div class="note">
+                <p>
+                  Đầu vào: <br />
+                  - Số tiền USD <br />
+                  - Giá USD hiện nay <br />
+                  <br />
+                  Xử lý: <br />
+                  - Tạo biến cho Số tiền USD là stUSD và tạo biến cho Giá USD
+                  hiện nay là giaUSD <br />
+                  - Tạo biến cho Số tiền quy đổi là soTienQuyDoi <br />
+                  - Gán giá trị cho stUSD và giaUSD <br />
+                  - Sử dụng công thức: soTienQuyDoi = stUSD giaUSD <br />
+                  <br />
+                  Đầu ra: <br />
+                  - Số tiền quy đổi
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="sotien"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập số tiền USD"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" onclick="Bai3()">
+                  Kết quả
+                </button>
+                <div class="rsText"><p id="result3"></p></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai4">
+              <h1>Diện tích, chu vi hình chữ nhật</h1>
+              <div class="note">
+                <p>
+                  Đầu vào: <br />
+                  - Chiều dài <br />
+                  - Chiều rộng <br />
+                  <br />
+                  Đầu ra: <br />
+                  - Tạo biến cho chiều dài và chiều rộng là: cd và cr <br />
+                  - Tạo biến cho chu vi và diện tích là : cv và dt <br />
+                  - Gán giá trị chiều dài cho cd và chiều rộng cho cr <br />
+                  - Sử dụng công thức: <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+dt = cd cr <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+cv = (cd + cr) 2 <br />
+                  <br />
+                  Đầu ra: <br />
+                  - Diện tích <br />
+                  - Chu vi
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="chieuDai"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập chiều dài"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="chieuRong"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập chiều rộng"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" onclick="Bai4()">
+                  Kết quả
+                </button>
+                <div class="rsText"><p id="result4"></p></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai5">
+              <h1>Tính tổng 2 ký số</h1>
+              <div class="note">
+                <p>
+                  Đầu vào: <br />
+                  - Số có 2 chữ số <br />
+                  <br />
+                  Xử lý: <br />
+                  - Tạo biến cho số có 2 chữ số là so <br />
+                  - Tạo biến cho số hàng đơn vị và số hàng chục là: soHDV và
+                  soHC <br />
+                  - Tạo biến tong cho tổng 2 ký số <br />
+                  - Sử dụng công thức: <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ soHDV = so % 10 <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;+ soHC = Math.floor(so / 10) <br />
+                  - tính tổng 2 ký số theo công thức : tong = soHDV + soHC
+                  <br />
+                  <br />
+                  Đầu ra: <br />
+                  - Tổng 2 ký số
+                </p>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="kySo"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập số có 2 chữ số"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" onclick="Bai5()">
+                  Kết quả
+                </button>
+                <div class="rsText"><p id="result5"></p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
